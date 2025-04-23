@@ -1,8 +1,8 @@
 {
   "id": "7848B8AC",
-  "name": "bicrypto",
-  "version": "4.6.7",
-  "description": "Bicrypto is a cryptocurrency exchange platform, where you can trade Bitcoin, Ethereum, Litecoin, and other cryptocurrencies.",
+  "name": "potex",
+  "version": "1.0.0",
+  "description": "PoTex is redefining corporate finance by turning future equity into a tradable asset.",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
