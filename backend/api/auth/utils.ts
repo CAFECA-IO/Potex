@@ -397,7 +397,7 @@ export async function verifySignature({
   projectId: string;
 }): Promise<boolean> {
   // isValidEip191Signature returns a boolean synchronously.
-  let isValid = isValidEip191Signature(address, message, signature);
+  let isValid = await isValidEip191Signature(address, message, signature);
   if (!isValid) {
     // isValidEip1271Signature returns a Promise<boolean>, so we must await it.
     isValid = await isValidEip1271Signature(

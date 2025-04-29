@@ -17,7 +17,7 @@ import {
 
 const path = "/api/finance/deposit/spot";
 export const metadata = {};
-export const spotVerificationIntervals: Map<string, NodeJS.Timeout> = new Map();
+export const spotVerificationIntervals: Map<string, ReturnType<typeof setInterval>> = new Map();
 
 export default async (data: Handler, message) => {
   const { user } = data;

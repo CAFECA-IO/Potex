@@ -520,7 +520,7 @@ class SolanaService {
       let programChangeSubscriptionId: number | undefined;
 
       // Inactivity timeout handler
-      let inactivityTimeout: NodeJS.Timeout | undefined = setTimeout(
+      let inactivityTimeout: ReturnType<typeof setInterval> | undefined = setTimeout(
         async () => {
           if (programChangeSubscriptionId !== undefined) {
             console.log(

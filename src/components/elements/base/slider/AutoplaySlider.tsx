@@ -37,7 +37,7 @@ const AutoplaySlider: React.FC<AutoplaySliderProps> = ({
 
   // Dynamic progress update with smoother transition and timing control
   useEffect(() => {
-    let interval: NodeJS.Timeout | undefined;
+    let interval: ReturnType<typeof setInterval> | undefined;
     const updateInterval = 50; // Interval duration for updating progress (in ms)
 
     if (isAutoplay) {

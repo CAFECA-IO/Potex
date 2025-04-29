@@ -28,7 +28,7 @@ type LoginStore = {
   resendCooldown: number;
   resendAttempts: number;
   recaptchaRef: any | null;
-  cooldownInterval: NodeJS.Timeout | null;
+  cooldownInterval: ReturnType<typeof setInterval> | null;
   script: HTMLScriptElement | null;
   errors: {
     email: string | undefined;

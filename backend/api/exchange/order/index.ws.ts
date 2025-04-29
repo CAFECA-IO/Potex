@@ -18,7 +18,7 @@ class OrderHandler {
   private static instance: OrderHandler;
   private trackedOrders: { [userId: string]: any[] } = {};
   private watchedUserIds: Set<string> = new Set();
-  private orderInterval: NodeJS.Timeout | null = null;
+  private orderInterval: ReturnType<typeof setInterval> | null = null;
   private lastFetchTime = 0;
   private unblockTime = 0;
 

@@ -7,7 +7,7 @@ export const metadata = {};
 
 class BaseMarketDataHandler {
   protected accumulatedBuffer: { [key: string]: any } = {};
-  protected bufferInterval: NodeJS.Timeout | null = null;
+  protected bufferInterval: ReturnType<typeof setInterval> | null = null;
   protected unblockTime = 0;
   protected activeSubscriptions: Set<string> = new Set();
   protected exchange: any = null;
