@@ -3,7 +3,7 @@ import { immer } from "zustand/middleware/immer";
 
 interface NewsState {
   news: any[];
-  interval: NodeJS.Timeout | null;
+  interval: ReturnType<typeof setInterval> | null;
   activeArticle: any | null;
   fetchNews: () => Promise<void>;
   getNewsIfEmpty: () => void;

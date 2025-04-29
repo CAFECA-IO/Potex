@@ -33,7 +33,7 @@ const binaryTurboProfit = validateBinaryProfit(
 );
 
 export class BinaryOrderService {
-  private static orderIntervals = new Map<string, NodeJS.Timeout>();
+  private static orderIntervals = new Map<string, ReturnType<typeof setInterval>>();
 
   static async createOrder({
     userId,

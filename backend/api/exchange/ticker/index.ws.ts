@@ -18,7 +18,7 @@ const TICKER_CACHE_KEY = "exchange:tickers";
 class TickerHandler {
   private static instance: TickerHandler;
   private accumulatedTickers = {};
-  private tickerInterval: NodeJS.Timeout | null = null;
+  private tickerInterval: ReturnType<typeof setInterval> | null = null;
   private unblockTime = 0;
   private isRunning = false;
   private redis: any;
