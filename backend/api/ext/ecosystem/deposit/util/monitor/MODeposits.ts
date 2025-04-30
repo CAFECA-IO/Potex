@@ -20,8 +20,8 @@ export class MODeposits implements IDepositMonitor {
   private currency: string;
   private address: string;
   private contractType: "PERMIT" | "NO_PERMIT";
-  private intervalId: NodeJS.Timeout | null = null;
-  private cleanupIntervalId: NodeJS.Timeout | null = null;
+  private intervalId: ReturnType<typeof setInterval> | null = null;
+  private cleanupIntervalId: ReturnType<typeof setInterval> | null = null;
   private pollingIntervalMs = 10000; // 10 seconds
   private maxBlocksPerPoll = 5000;
   private backoffAttempts = 0;
