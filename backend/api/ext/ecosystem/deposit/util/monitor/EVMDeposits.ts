@@ -33,9 +33,9 @@ export class EVMDeposits implements IDepositMonitor {
   private tokenEventListener: ((log: any) => Promise<void>) | null = null;
 
   // Interval IDs to track polling tasks (for native and token deposits)
-  private nativeCleanupIntervalId: NodeJS.Timeout | null = null;
-  private nativeVerifyIntervalId: NodeJS.Timeout | null = null;
-  private tokenCleanupIntervalId: NodeJS.Timeout | null = null;
+  private nativeCleanupIntervalId: ReturnType<typeof setInterval> | null = null;
+  private nativeVerifyIntervalId: ReturnType<typeof setInterval> | null = null;
+  private tokenCleanupIntervalId: ReturnType<typeof setInterval> | null = null;
 
   constructor(options: EVMOptions) {
     this.wallet = options.wallet;
