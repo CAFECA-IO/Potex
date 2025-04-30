@@ -4,6 +4,7 @@ Real World Asset Exchange
 ## Pre Require
 - install MySQL
 - install Redis
+- install ScyllaDB
 
 ## Deploy
 ```
